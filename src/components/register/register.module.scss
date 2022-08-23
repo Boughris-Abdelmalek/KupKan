@@ -1,0 +1,105 @@
+$primary-color: #011638;
+$secondary-color: #e5e7e6;
+$tertairy-color: #D8315B;
+
+* {
+    color: $primary-color;
+}
+
+.login {
+    display: grid; 
+    grid-template-columns: 0.3fr 1.9fr 0.5fr 2fr 0.3fr; 
+    grid-template-rows: 0.5fr 1fr 0.8fr 2.3fr 0.4fr 1.5fr 0.5fr; 
+    gap: 0px 0px;
+    height: 100vh;
+    grid-template-areas: 
+      ". . . . ."
+      ". appName appName appName ."
+      ". . . . ."
+      ". presentation presentation form ."
+      ". . . . ."
+      ". footer footer footer ."
+      ". . . . ."; 
+  }
+  .form { grid-area: form; }
+  .footer { grid-area: footer; }
+  .logo { grid-area: appName; }
+  .loginPresentation { grid-area: presentation; }
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+
+    & img {
+        width: 4em;
+    }
+}
+
+.loginPresentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-left: 0em;
+    position: relative;
+    
+    & a {
+        font-size: .55em;
+        position: absolute;
+        top: 70%;
+        color: $tertairy-color;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.5em;
+    padding-inline: 3em;
+    border-radius: 20px;
+    height: 28em;
+    width: 30em;
+    background: white;
+
+    & input {
+        width: 100%;
+        height: 6em;
+        margin-block: .75em;
+        border-radius: 10px;
+        padding-inline-start: 2em;
+    }
+
+    & button {
+        height: 5em;
+        width: 8em;
+        font-size: 1em;
+        margin-top: 1.25em;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41em;
+    height: 4em;
+    margin: auto;
+    border-radius: 10px;
+    background: white;
+
+
+    & ul {
+        display: flex;
+        justify-content: space-around;
+        column-gap: 2em;
+    }
+
+    & * {
+        background: white;
+    }
+}

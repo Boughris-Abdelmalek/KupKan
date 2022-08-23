@@ -1,0 +1,272 @@
+.profileContainer {
+
+    border-radius: 30px;
+    position: relative;
+    width: 100%;
+
+    & .coverPicture {
+        width: 60vw;
+        height: 30vw;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+
+    & .personalInfos {
+        position: absolute;
+        top: 26vw;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        text-align: center;
+        width: 50vw;
+        height: 20vw;
+        border-radius: 10px;
+        background: white;
+         & * {
+            background: white;
+            border-radius: 30px;
+         }
+    }
+
+    & .profilePicture {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 25%;
+        height: 13vw;
+    }
+
+    & .textInfos {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        font-size: 2vw;
+
+        & > div {
+            width: 20em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.callToTweet {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    position: relative;
+    border-radius: 30px;
+    width: 60vw;
+    height: 6vw;
+
+    & input {
+        width: 40vw;
+        height: 50%;
+        border-radius: 30px;
+        padding-inline-start: 1em;
+        font-size: 1.75vw;
+
+    }
+
+    & button {
+        width: 8vw;
+        height: 2.5vw;
+        font-size: 1.75vw;
+    }
+
+    & img {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+}
+
+.publicationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1em;
+    height: fit-content;
+
+    & * {
+        background: white;
+        border-radius: 10px;
+    }
+
+    & .tweetArea {
+        background: #e5e7e6;
+        height: 2em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-inline-start: 1em;
+    }
+
+    & > div {
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+    }
+    
+    & .interactions {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1em;
+
+        & button {
+            color: black;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            column-gap: .5em;
+            align-items: center;
+        }
+
+        & .comments {
+            background: #e5e7e6;
+        }
+
+        & > div {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        & .reply {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            background: #e5e7e6;
+            row-gap: 1em;
+            padding: .25em;
+            & p {
+                padding: .25em;
+                max-width: 10em;
+            }
+        }
+    }
+}
+
+
+.profilePicture {
+    width: 87px;
+    height: 87px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notifications {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    font-size: 2vw;
+
+    & button {
+        font-size: 2vw;
+        background: none;
+    }
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: 0.6fr 1.8fr 0.6fr; 
+    grid-template-rows: 0.2fr 1.3fr 0.5fr 2fr;
+    gap: 1vw 1em; 
+    grid-template-areas: 
+      "Logo . Notifications"
+      "suggestions Profile Footer"
+      ". PersonalPosts ."
+      ". feed .";
+
+            & .logo {
+
+                & > h1 {
+                    cursor: pointer;
+                }
+            }
+      
+            & footer > ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+                width: 11vw;
+                border-radius: 30px;
+                background: white;
+                font-size: 1vw;
+      
+                & li, a {
+                    background: white;
+                }
+            }
+
+            & .suggestions {
+                height: fit-content;
+                margin-inline-start: .75em;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 1em;
+                & ul {
+                    border-radius: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1em;
+                    background: white;
+                    padding: 1em;
+                    width: 22vw;
+                    & li {
+                        margin: auto;
+                        background: #e5e7e6;
+                        padding: .25em;
+                        border-radius: 10px;
+                        width: 10em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        width: 100%;
+                        font-size: 1.75vw;
+                    }
+                }
+
+                & h5 {
+                    font-size: 21px;
+                }
+
+                & button { 
+                    padding-inline: 1em;
+                    padding-block: .25em;
+                }
+            }
+  }
+  .profileContainer { grid-area: Profile; }
+  .footer { grid-area: Footer; }
+  .logo { grid-area: Logo; }
+  .callToTweet { grid-area: PersonalPosts; }
+  .notifications { grid-area: Notifications; }
+  .suggestions { grid-area: suggestions; }
+  .publicationContainer { grid-area: feed; }
+  

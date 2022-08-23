@@ -1,0 +1,70 @@
+.container {
+    display: grid; 
+    grid-template-columns: 0.2fr 1.8fr 1fr 1.8fr 0.2fr; 
+    grid-template-rows: 1fr 0.3fr 1.7fr 1fr 1fr 1fr; 
+    gap: 0px 0px;
+    height: 100vh;
+    grid-template-areas: 
+      ". header header header ."
+      ". . . . ."
+      ". suggestions suggestions suggestions ."
+      ". suggestions suggestions suggestions ."
+      ". suggestions suggestions suggestions ."
+      ". suggestions suggestions suggestions ."; 
+  }
+  .main { grid-area: suggestions; }
+  .header { grid-area: header; }
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & h1 {
+        font-size: 2em;
+    }
+
+    & h3 {
+        font-size: 3em;
+    }
+
+    & .back {
+        column-gap: .5em;
+        font-size: 1.75em;
+    }
+
+    & .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    & > div {
+        width: 60%;
+        height: 2em;
+        padding: 1.25em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        border-radius: 30px;
+
+        & > div {
+            background: white;
+            font-size: 24px;
+        }
+
+        & button {
+            padding-inline: 1em;
+            padding-block: .5em;
+        }
+    }
+}

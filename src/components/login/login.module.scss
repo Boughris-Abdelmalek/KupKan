@@ -1,0 +1,125 @@
+$primary-color: #011638;
+$secondary-color: #e5e7e6;
+$tertairy-color: #D8315B;
+
+* {
+    color: $primary-color;
+}
+
+.login {
+    display: grid; 
+    grid-template-columns: 0.5fr 1.6fr 0.3fr 2.1fr 0.5fr; 
+    grid-template-rows: 0.9fr 1.7fr 1.3fr .75fr 0.1fr;
+    gap: 0px 0px;
+    height: 100vh;
+    grid-template-areas: 
+      ". . . . ."
+      ". signIn . form ."
+      ". . . . ."
+      ". footer footer footer ."
+      ". . . . ."; 
+  }
+  .loginPresentation { grid-area: signIn; }
+  .formBlock { grid-area: form; }
+  .footer { grid-area: footer; }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.25em;
+    padding-inline: 3em;
+    border-radius: 20px;
+    height: 23em;
+    width: 25em;
+    background: white;
+    position: relative;
+
+    & input {
+        width: 100%;
+        height: 2.5em;
+        margin-block: .75em;
+        border-radius: 10px;
+        padding-inline-start: 2em;
+        font-size: 1.2em;
+    }
+
+    & button {
+        height: 2.5em;
+        width: fit-content;
+        padding-inline: 1em;
+        font-size: 1em;
+        margin-top: 1.25em;
+    }
+    & .line{
+        width: 70%;
+        height: 0px;
+        border-bottom: 1px solid #c4c5c4;
+        position: absolute;
+        top: 73%;
+    }
+
+    & :last-child {
+        background: $tertairy-color;
+    }
+}
+
+.loginPresentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41em;
+    height: 4em;
+    margin: auto;
+    border-radius: 10px;
+    background: white;
+
+
+    & ul {
+        display: flex;
+        justify-content: space-around;
+        column-gap: 2em;
+    }
+
+    & * {
+        background: white;
+    }
+}
+
+.formBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+        margin-block-start: 1em;
+        margin-inline-start: 2em;
+        width: 25em;
+        font-size: .75em;
+    }
+}
+
+.reset {
+    background: white;
+    height: fit-content;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 7em;
+    }
+}
